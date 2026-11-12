@@ -18,12 +18,12 @@ df['Order Date'] = pd.to_datetime(df['Order Date'] , format = '%d/%m/%Y' , error
 df['Ship Date'] = pd.to_datetime(df['Ship Date'], format='%d/%m/%Y', errors='coerce')
 print("\n--- Data Tybes After Conversion ---")
 print(df[['Order Date','Ship Date']].dtypes)
-category_sales = df.groupby('Category')['Sales'].sum().reset_index() # بتجمعلك المنتجات حسب الفئه بعدين بعدين بتجمع اجمالي المبيعات لكل فئه لحال
-category_sales = category_sales.sort_values(by='Sales', ascending=False) # بترتب الناتج تنازليا من الفئه الاكبر في المبيعات الى الفئه الاقل
+category_sales = df.groupby('Category')['Sales'].sum().reset_index() 
+category_sales = category_sales.sort_values(by='Sales', ascending=False) 
 print("\n--- Total Sales by Product Category ---")
 print(category_sales)
-sns.set_theme(style='whitegrid') # هيك انا اعطيت خلفيه لونها ابيض
-plt.figure(figsize=(6,3)) # حددت ابعادها
+sns.set_theme(style='whitegrid') 
+plt.figure(figsize=(6,3)) 
 sns.barplot(x='Category',y='Sales',data=category_sales ,palette='viridis')
 plt.title('Total Sales by Product Category', fontsize=14, fontweight='bold')
 plt.xlabel('Product Category', fontsize=12)
