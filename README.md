@@ -105,14 +105,3 @@ This prints a data overview (head, info, shape, missing values, duplicates) and 
 - **Yearly trends** help identify peak seasons for promotional campaigns.
 
 ---
-
-## 👤 Author
-
-**Your Name**
-GitHub: [@your-username](https://github.com/your-username)
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
